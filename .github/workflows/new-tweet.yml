@@ -5,6 +5,7 @@
 name: New Tweet
 
 on:
+  push:
   schedule:
     - cron: "*/6 * * * *"
 
