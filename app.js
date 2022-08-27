@@ -22,9 +22,9 @@ async function scrapeSell(url) {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.goto(url);
-    await page.waitForXPath('//*[@id="__APP"]/div[2]/main/div[1]/div[4]/div/div[2]/div[6]/div[1]/div[2]/div/div/div[1]')
+    await page.waitForXPath('//*[@id="__APP"]/div[2]/main/div[1]/div[4]/div/div[2]/div[5]/div[1]/div[2]/div/div/div[1]')
     await page.waitForSelector('.css-1m1f8hn')
-    const [el] = await page.$x('//*[@id="__APP"]/div[2]/main/div[1]/div[4]/div/div[2]/div[6]/div[1]/div[2]/div/div/div[1]');
+    const [el] = await page.$x('//*[@id="__APP"]/div[2]/main/div[1]/div[4]/div/div[2]/div[5]/div[1]/div[2]/div/div/div[1]');
     const txt = await el.getProperty('textContent')
     const rawTxt = await txt.jsonValue();
     sellRate = parseFloat(rawTxt);
