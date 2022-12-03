@@ -33,8 +33,8 @@ async function scrapeSell(url) {
 
 
 async function runApp() {
-    await scrapeBuy('https://p2p.binance.com/en-GB/trade/all-payments/USDT?fiat=LKR')
-    await scrapeSell('https://p2p.binance.com/en-GB/trade/sell/USDT?fiat=LKR&payment=ALL')
+    await scrapeBuy('https://p2p.binance.com/en-IN/trade/all-payments/USDT?fiat=LKR')
+    await scrapeSell('https://p2p.binance.com/en-IN/trade/sell/USDT?fiat=LKR&payment=ALL')
     
     const consumer_key = process.env.CONSUMER_API_KEY
     const consumer_secret = process.env.CONSUMER_API_SECRET_KEY
